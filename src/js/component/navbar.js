@@ -9,9 +9,11 @@ export class Navbar extends React.Component {
 		return (
 			<nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 				<div className="tittle">
-					<a className="navbar-brand" href="#">
-						<img src={starlogo} width="250" height="125" alt="" />
-					</a>
+					<Link to="/">
+						<a className="navbar-brand">
+							<img src={starlogo} width="250" height="125" alt="" />
+						</a>
+					</Link>
 					<button
 						className="navbar-toggler"
 						type="button"
