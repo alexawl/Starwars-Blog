@@ -1,0 +1,66 @@
+body{
+    background-color: black;
+}
+
+.tittle{
+    margin: auto;
+}
+
+.tittlebod{
+    margin-top: 210px;;
+    height: 80px;
+    width: 100%;
+    border-top-style: solid;
+    border-bottom-style: solid;
+}
+
+.tittlebrowser{
+display:table-cell;
+ width: 100%;
+ height: 80px;
+ vertical-align:middle;
+ padding-left: 25px;
+ color: white;
+}
+
+.tittlegrid1{
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+}
+
+.h1grid1{
+display:table-cell;
+ width: 100%;
+ height: 50px;
+ vertical-align:middle;
+ padding-left: 50px;
+ color: white;
+}
+
+.tittlegrid2{
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+}
+
+.h1grid2{
+display:table-cell;
+ width: 100%;
+ height: 50px;
+ vertical-align:middle;
+ padding-left: 50px;
+ color: white;
+}
+
+.card-deck{
+    margin: auto;
+}
+
+.card-body{
+    background-color: gainsboro;
+}
