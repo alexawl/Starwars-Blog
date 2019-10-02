@@ -1,3 +1,14 @@
-/* 
-    General Styles
-*/
+
+.navbar{
+    flex-direction: column;
+    background-image: url("http://cdn8.dissolve.com/p/D1307_52_005/D1307_52_005_0004_600.jpg")
+}
+
+.footer{
+    margin-top: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: gainsboro;
+    color: black;
+}
