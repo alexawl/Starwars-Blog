@@ -12,7 +12,9 @@ export class Content extends React.Component {
 		super();
 		this.state = {
 			characters: [],
-			planets: []
+			planets: [],
+			url: [],
+			temp: ""
 		};
 	}
 
@@ -27,7 +29,7 @@ export class Content extends React.Component {
 			})
 			.then(data => {
 				this.setState({ characters: data.results });
-				console.log(data);
+				console.log(data.results);
 			})
 			.catch(error => console.log(error));
 
@@ -41,7 +43,6 @@ export class Content extends React.Component {
 			})
 			.then(data => {
 				this.setState({ planets: data.results });
-				console.log(data.results);
 			})
 			.catch(error => console.log(error));
 	}
@@ -49,7 +50,15 @@ export class Content extends React.Component {
 	render() {
 		const characters = this.state.characters;
 		const planets = this.state.planets;
-		console.log(planets);
+
+		Unicorn(characters.map(actor => (id = actor.url)));
+
+		console.log(Unicorn);
+
+		//let x = this.state.url;
+		//let x1 = x.substr(28);
+		//let x2 = parseInt(x1);
+		//console.log(x2);
 		return (
 			<div className="tittlebod">
 				<div>
