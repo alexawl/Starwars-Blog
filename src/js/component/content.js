@@ -27,6 +27,7 @@ export class Content extends React.Component {
 			})
 			.then(data => {
 				this.setState({ characters: data.results });
+				console.log(data);
 			})
 			.catch(error => console.log(error));
 

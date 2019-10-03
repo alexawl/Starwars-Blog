@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 //include images into your bundle
 import arturito from "../../img/arturito1.jpg";
@@ -12,8 +13,10 @@ export const Card = props => {
 				<img src={arturito} className="card-img-top" />
 				<div className="card-body">
 					<h5 className="card-title">{props.name}</h5>
-					<p className="card-text">Database</p>
 				</div>
+				<Link to="/demo">
+					<a className="card-text nav-link">Get info Details</a>
+				</Link>
 			</div>
 		</div>
 	);

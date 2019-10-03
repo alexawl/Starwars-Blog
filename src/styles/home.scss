@@ -1,5 +1,7 @@
 body{
     background-color: black;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 20px;
 }
 
 .tittle{
@@ -63,4 +65,18 @@ display:table-cell;
 
 .card-body{
     background-color: gainsboro;
+}
+
+.card-title{
+    font-size: 25px;
+}
+
+.card-body{
+    padding-top: 5px;
+    padding-bottom: 0px;
+}
+
+.card-text{
+    background-color: gainsboro;
+    padding-left: 20px;
 }
