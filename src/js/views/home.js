@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 //import your own components
 import { Content } from "../component/content";

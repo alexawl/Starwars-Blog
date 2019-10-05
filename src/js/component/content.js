@@ -13,7 +13,6 @@ export class Content extends React.Component {
 		this.state = {
 			characters: [],
 			planets: [],
-			url: [],
 			temp: ""
 		};
 	}
@@ -51,14 +50,6 @@ export class Content extends React.Component {
 		const characters = this.state.characters;
 		const planets = this.state.planets;
 
-		Unicorn(characters.map(actor => (id = actor.url)));
-
-		console.log(Unicorn);
-
-		//let x = this.state.url;
-		//let x1 = x.substr(28);
-		//let x2 = parseInt(x1);
-		//console.log(x2);
 		return (
 			<div className="tittlebod">
 				<div>
@@ -70,9 +61,12 @@ export class Content extends React.Component {
 				<div className="container">
 					<div className="row">
 						<div className="card-deck">
-							{characters.map(actor => (
-								<Card key={actor.mass + actor.height} name={actor.name} />
-							))}
+							{characters.map(actor => {
+								let x = actor.url;
+								let x1 = x.substr(28);
+								let x2 = parseInt(x1);
+								return <Card key={x2} name={actor.name} id={x2} />;
+							})}
 						</div>
 					</div>
 				</div>
