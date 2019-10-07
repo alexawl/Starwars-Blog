@@ -7,7 +7,7 @@ import arturito from "../../img/arturito1.jpg";
 
 //create your first component
 export const Card = props => {
-	const link = "/demo/:" + props.id;
+	const link = "/demo/" + props.type + "/" + props.id;
 	console.log(link);
 
 	return (
@@ -27,5 +27,6 @@ export const Card = props => {
 
 Card.propTypes = {
 	name: PropTypes.string,
-	id: PropTypes.number
+	id: PropTypes.number,
+	type: PropTypes.string
 };

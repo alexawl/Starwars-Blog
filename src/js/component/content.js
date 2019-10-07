@@ -28,7 +28,6 @@ export class Content extends React.Component {
 			})
 			.then(data => {
 				this.setState({ characters: data.results });
-				console.log(data.results);
 			})
 			.catch(error => console.log(error));
 
@@ -42,6 +41,7 @@ export class Content extends React.Component {
 			})
 			.then(data => {
 				this.setState({ planets: data.results });
+				console.log(data.results);
 			})
 			.catch(error => console.log(error));
 	}
@@ -61,11 +61,12 @@ export class Content extends React.Component {
 				<div className="container">
 					<div className="row">
 						<div className="card-deck">
-							{characters.map(actor => {
+							{characters.map((actor, ind) => {
 								let x = actor.url;
 								let x1 = x.substr(28);
 								let x2 = parseInt(x1);
-								return <Card key={x2} name={actor.name} id={x2} />;
+								let y = x.substr(21, 6);
+								return <Card key={ind} name={actor.name} id={x2} type={y} />;
 							})}
 						</div>
 					</div>
@@ -76,9 +77,13 @@ export class Content extends React.Component {
 				<div className="container">
 					<div className="row">
 						<div className="card-deck">
-							{planets.map(worlds => (
-								<Card key={worlds.orbital_period} name={worlds.name} />
-							))}
+							{planets.map((worlds, ind) => {
+								let x = worlds.url;
+								let x1 = x.substr(29);
+								let x2 = parseInt(x1);
+								let y = x.substr(21, 7);
+								return <Card key={ind} name={worlds.name} id={x2} type={y} />;
+							})}
 						</div>
 					</div>
 				</div>
