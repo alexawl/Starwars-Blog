@@ -5,7 +5,16 @@ import { Link } from "react-router-dom";
 import starlogo from "../../img/starwarslogo2.png";
 
 export class Navbar extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			selectdrop: false
+		};
+	}
+
 	render() {
+		//show => () => Hacer funcion para hacer el display del Dropdown
+
 		return (
 			<nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 				<div className="tittle">
@@ -44,10 +53,29 @@ export class Navbar extends React.Component {
 									<a className="nav-link">Series</a>
 								</Link>
 							</li>
-							<li className="nav-item">
-								<Link to="/">
-									<a className="nav-link">Videos</a>
-								</Link>
+							<li className="nav-item dropdown">
+								<a
+									className="nav-link dropdown-toggle"
+									href="#"
+									id="navbarDropdown"
+									role="button"
+									data-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false">
+									Dropdown
+								</a>
+								<div className="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a className="dropdown-item" href="#">
+										Action
+									</a>
+									<a className="dropdown-item" href="#">
+										Another action
+									</a>
+									<div className="dropdown-divider" />
+									<a className="dropdown-item" href="/">
+										Something else here
+									</a>
+								</div>
 							</li>
 						</ul>
 					</div>
