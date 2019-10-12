@@ -7,9 +7,6 @@ import arturito from "../../img/arturito1.jpg";
 
 //create your first component
 export const Card = props => {
-	const link = "/demo/" + props.type + "/" + props.id;
-	console.log(link);
-
 	return (
 		<div className="mt-3">
 			<div className="card">
@@ -17,9 +14,15 @@ export const Card = props => {
 				<div className="card-body">
 					<h5 className="card-title">{props.name}</h5>
 				</div>
-				<Link to={link}>
-					<a className="card-text nav-link">Get info Details</a>
-				</Link>
+				{props.type == "people" ? (
+					<Link to={"/details/" + props.type + "/" + props.id}>
+						<a className="card-text nav-link">Get info Details</a>
+					</Link>
+				) : (
+					<Link to={"/detailsplanets/" + props.type + "/" + props.id}>
+						<a className="card-text nav-link">Get info Details</a>
+					</Link>
+				)}
 			</div>
 		</div>
 	);

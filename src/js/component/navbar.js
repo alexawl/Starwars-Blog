@@ -16,7 +16,7 @@ export class Navbar extends React.Component {
 		//show => () => Hacer funcion para hacer el display del Dropdown
 
 		return (
-			<nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+			<nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
 				<div className="tittle">
 					<Link to="/">
 						<a className="navbar-brand">
@@ -44,7 +44,7 @@ export class Navbar extends React.Component {
 								</Link>
 							</li>
 							<li className="nav-item">
-								<Link to="/demo/">
+								<Link to="/">
 									<a className="nav-link">Detail test</a>
 								</Link>
 							</li>
@@ -84,14 +84,3 @@ export class Navbar extends React.Component {
 		);
 	}
 }
-
-<nav className="navbar navbar-light bg-light mb-3">
-	<Link to="/single">
-		<span className="navbar-brand mb-0 h1">React Boilerplate</span>
-	</Link>
-	<div className="ml-auto">
-		<Link to="/demo">
-			<button className="btn btn-primary">Check the Context in action</button>
-		</Link>
-	</div>
-</nav>;
