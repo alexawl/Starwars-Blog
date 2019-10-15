@@ -8,15 +8,17 @@ export class Navbar extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			selectdrop: false
+			clicked: false
 		};
 	}
 
-	render() {
-		//show => () => Hacer funcion para hacer el display del Dropdown
+	show = () => {
+		this.setState({ clicked: !this.state.clicked });
+	};
 
+	render() {
 		return (
-			<nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+			<nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 				<div className="tittle">
 					<Link to="/">
 						<a className="navbar-brand">
@@ -53,18 +55,17 @@ export class Navbar extends React.Component {
 									<a className="nav-link">Series</a>
 								</Link>
 							</li>
-							<li className="nav-item dropdown">
-								<a
-									className="nav-link dropdown-toggle"
-									href="#"
-									id="navbarDropdown"
-									role="button"
+							<li className={" btn-group " + (this.state.clicked && "show")}>
+								<button
+									onClick={this.show}
+									type="button"
+									className="drop-button btn btn-secondary dropdown-toggle"
 									data-toggle="dropdown"
 									aria-haspopup="true"
 									aria-expanded="false">
-									Dropdown
-								</a>
-								<div className="dropdown-menu" aria-labelledby="navbarDropdown">
+									Favorites
+								</button>
+								<div className={"dropdown-menu dropdown-menu-right " + (this.state.clicked && "show")}>
 									<a className="dropdown-item" href="#">
 										Action
 									</a>
