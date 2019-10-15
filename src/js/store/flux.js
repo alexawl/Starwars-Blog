@@ -1,6 +1,25 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			favorites: []
+		},
+		actions: {
+			addToFavorites: element => {
+				let store = getStore();
+				const temp = store.favorites.concat([element]);
+				setStore({
+					favorites: temp
+				});
+			}
+		}
+	};
+};
+
+export default getState;
+
+/*const getState = ({ getStore, getActions, setStore }) => {
+	return {
+		store: {
 			demo: [
 				{
 					title: "FIRST",
@@ -37,4 +56,4 @@ const getState = ({ getStore, getActions, setStore }) => {
 	};
 };
 
-export default getState;
+export default getState;*/

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Consumer } from "../store/appContext.js";
 import PropTypes from "prop-types";
 
 //import { Consumer } from "../store/appContext";
@@ -43,6 +43,18 @@ export class Details1 extends React.Component {
 						</div>
 						<div className="contentdetail">
 							<p>This is a test of planets text.</p>
+							<Consumer>
+								{({ actions }) => {
+									return (
+										<button
+											type="button"
+											className="btn btn-primary btn-sm"
+											onClick={() => actions.addToFavorites(this.state.item)}>
+											Add to Favorites
+										</button>
+									);
+								}}
+							</Consumer>
 						</div>
 					</div>
 				</div>

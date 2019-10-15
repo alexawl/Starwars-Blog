@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Consumer } from "../store/appContext.js";
 
 //include images into your bundle
 import starlogo from "../../img/starwarslogo2.png";
@@ -66,16 +67,15 @@ export class Navbar extends React.Component {
 									Favorites
 								</button>
 								<div className={"dropdown-menu dropdown-menu-right " + (this.state.clicked && "show")}>
-									<a className="dropdown-item" href="#">
-										Action
-									</a>
-									<a className="dropdown-item" href="#">
-										Another action
-									</a>
-									<div className="dropdown-divider" />
-									<a className="dropdown-item" href="/">
-										Something else here
-									</a>
+									<Consumer>
+										{({ store, actions }) => {
+											return store.favorites.map((item, index) => (
+												<button key={index} className="dropdown-item" type="button">
+													{item.name}
+												</button>
+											));
+										}}
+									</Consumer>
 								</div>
 							</li>
 						</ul>
