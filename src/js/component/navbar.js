@@ -23,7 +23,7 @@ export class Navbar extends React.Component {
 				<div className="tittle">
 					<Link to="/">
 						<a className="navbar-brand">
-							<img src={starlogo} width="250" height="125" alt="" />
+							<img src={starlogo} width="275" height="150" alt="" />
 						</a>
 					</Link>
 					<button

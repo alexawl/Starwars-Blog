@@ -17,7 +17,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 export default getState;
 
-/*const getState = ({ getStore, getActions, setStore }) => {
+/*
+const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			demo: [
@@ -56,4 +57,5 @@ export default getState;
 	};
 };
 
-export default getState;*/
+export default getState;
+*/
